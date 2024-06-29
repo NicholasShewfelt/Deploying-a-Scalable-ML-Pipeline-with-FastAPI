@@ -1,11 +1,10 @@
 import pickle
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from ml.data import process_data
-# TODO: add necessary import
 from sklearn.ensemble import RandomForestClassifier
 
 
-# Optional: implement hyperparameter tuning.
+
 def train_model(X_train, y_train):
     """
     Trains a machine learning model and returns it.
@@ -21,7 +20,7 @@ def train_model(X_train, y_train):
     model
         Trained machine learning model.
     """
-    # TODO: implement the function
+    
     random_forest = RandomForestClassifier()
     random_forest.fit(X_train, y_train)
     return random_forest
@@ -64,8 +63,12 @@ def inference(model, X):
     preds : np.array
         Predictions from the model.
     """
-    # TODO: implement the function
-    preds = model.predict(X)
+    
+    #Note to self, dont make sure to check this in later steps before submitting
+    
+    
+    preds = model.predict(X) #Note to self, dont make sure to check this in later steps before submitting 
+    
     return preds
 
 
@@ -79,14 +82,17 @@ def save_model(model, path):
     path : str
         Path to save pickle file.
     """
-    # TODO: implement the function
+    
+    
     with open(path, 'wb') as outfile:
         pickle.dump(model, outfile)
 
 
 def load_model(path):
     """ Loads pickle file from `path` and returns it."""
-    # TODO: implement the function
+    
+    
+    
     with open(path, 'rb') as infile:
         return pickle.load(infile)
 
@@ -134,15 +140,9 @@ def performance_on_categorical_slice(
     fbeta : float
 
     """
-    # TODO: implement the function
-    X_slice, y_slice, _, _ = process_data(
-        data,
-        categorical_features=categorical_features,
-        label=label,
-        training=False,
-        encoder=encoder,
-        lb=lb,
-    )
+    
+    slice_data = data[data[column_name]==slice_value]
+    X_slice, y_slice, _, _ = process_data(slice_data, categorical_features, label, False, encoder, lb)
     preds = inference(model, X_slice)
     precision, recall, fbeta = compute_model_metrics(y_slice, preds)
     return precision, recall, fbeta
