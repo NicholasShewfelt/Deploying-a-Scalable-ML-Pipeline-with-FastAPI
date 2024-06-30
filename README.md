@@ -16,11 +16,11 @@ Namely, I had to:
 
 # Elements of the project
 
-# Data
+## Data
 * The census.csv file was given to me as the dataset for the project. It consists of rows of data in which each row represents an individual and has many trait columns that contain information about the individual, such as their age, mariage status, sex, and many more traits such as these. At the last column in each row is a true or false column showing whether or not the individual makes greater than r less than 50K.
 
 
-# Parts of the Project
+## Parts of the Project
 The project consists of two parts:
 * Model which consists of the necessary components to create and train a machine learning model, such as the train_model.py file and the 
  data.pyfile, all of which house functions for when the main.py file is run.
