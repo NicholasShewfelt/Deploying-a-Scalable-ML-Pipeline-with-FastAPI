@@ -6,7 +6,7 @@ The project in its entirety consists of an entire machine learning pipeline for 
 
 
 # Contributions 
-Namely, I had to:
+Amongst other contributions I:
 * Design the FastAPI backend.
 * Write functions for the machine learning pipeline (such as running the model on a catagorical slice of the dataset).
 * Write code to train the model on the dataset using the functions I made.
