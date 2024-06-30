@@ -22,10 +22,6 @@ Namely, I had to:
 
 # Parts of the Project
 The project consists of two parts:
-* Model
-    * Consists of the necessary components to create and train a machine learning model, such as the train_model.py file and the 
+* Model which consists of the necessary components to create and train a machine learning model, such as the train_model.py file and the 
  data.pyfile, all of which house functions for when the main.py file is run.
-* RESTful API
-    * Created using FastAPI
-    * Get on the root, giving a welcome message.
-    * POST that does model inference.
+* RESTful API which was created using FastAPI and most notably has a Get on the root, giving a welcome message, and a POST that does model inference.
